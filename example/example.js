@@ -7,7 +7,8 @@
  *
  * @apiDescription Compare Verison 0.3.0 with 0.2.0 and you will see the green markers with new items in version 0.3.0 and red markers with removed items since 0.2.0.
  *
- * @apiParam {Number} id The Users-ID.
+ * @apiParam {Number} @id=15 The Users-ID.
+ * @apiParam {String} name Name of the User.
  *
  * @apiExample Example usage:
  * curl -i http://localhost/user/4711
@@ -66,3 +67,10 @@ function postUser() { return; }
  * @apiUse CreateUserError
  */
 function putUser() { return; }
+
+/**
+ * @hook {ALL} userHook(<entity|op>).asCam Aqui Um Titulo Para O Hook
+ * @hookDescription Aqui a Descrição do que e para que serve esse hook
+ * @hookGroup AgruparOsHookEmUmGrupo
+*/
+function hook() { return; }
