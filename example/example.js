@@ -69,8 +69,15 @@ function postUser() { return; }
 function putUser() { return; }
 
 /**
- * @hook {ALL} userHook(<entity|op>).asCam Aqui Um Titulo Para O Hook
+ * @hook {ALL} user(<entity|op>).asEdit Aqui Um Titulo Para O Hook
  * @hookDescription Aqui a Descrição do que e para que serve esse hook
- * @hookGroup AgruparOsHookEmUmGrupo
+ * @hookGroup Edicao
+*/
+function hook() { return; }
+
+/**
+ * @hook {ALL} user(<entity|op>).asDelete blablabla
+ * @hookDescription adskhaskdhj aksdjhak dhkajh dkasjhdk jdhkjsah djks
+ * @hookGroup Edicao
 */
 function hook() { return; }

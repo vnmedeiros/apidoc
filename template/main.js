@@ -55,7 +55,7 @@ require([
     // load google web fonts
     loadGoogleFontCss();
 
-    var api = apiData.api;
+    var api = apiData.api;    
 
     //
     // Templates
@@ -94,14 +94,18 @@ require([
     var apiByGroup = _.groupBy(api, function(entry) {
         return entry.group;
     });
-
+    
     // grouped by group and name
     var apiByGroupAndName = {};
     $.each(apiByGroup, function(index, entries) {
         apiByGroupAndName[index] = _.groupBy(entries, function(entry) {
             return entry.name;
         });
-    });
+    });    
+    
+    //get doctype from URL    
+    var url = new URL(window.location.href);
+    var doctype = url.searchParams.get("doctype");
 
     //
     // sort api within a group by title ASC and custom order
@@ -129,8 +133,9 @@ require([
         titles.forEach(function(name) {
             var values = name.split('#~#');
             var key = values[1];
-            groupEntries[key].forEach(function(entry) {
-                newList.push(entry);
+            groupEntries[key].forEach(function(entry) {                
+                if(entry.doctype == doctype)
+                    newList.push(entry);
             });
         });
     });
