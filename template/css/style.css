@@ -329,6 +329,10 @@ pre code.sample-request-response-json {
   z-index: 11;
 }
 
+.sidenav-search.btn {
+  width: 50%;
+}
+
 .sidenav-search .search {
   height: 26px;
 }
